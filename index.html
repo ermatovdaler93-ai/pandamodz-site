@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090812">
+  <meta name="description" content="PANDA MODZ — premium mod store and key platform.">
+  <title>PANDA MODZ — Premium Mod Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="PANDA MODZ home">PANDA<span>MODZ</span><i>®</i></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="navigation" id="navigation">
+      <a href="#home">Главная</a>
+      <a href="#store">Магазин</a>
+      <a href="#key-system">Key System</a>
+      <a href="#about">О платформе</a>
+    </nav>
+    <a class="header-action" href="#store">Открыть магазин <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot"></span> PREMIUM MODZ PLATFORM</div>
+        <h1>LEVEL UP<br>WITH <span>PANDA MODZ</span></h1>
+        <p class="hero-description">Открой каталог приложений, изучай новые релизы и управляй доступом к своим продуктам на одной платформе.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#store">Исследовать каталог <span>↗</span></a>
+          <a class="button button-ghost" href="#key-system">Активировать Key</a>
+        </div>
+        <div class="hero-note"><span>✦</span> Новые релизы и обновления платформы</div>
+      </div>
+      <div class="hero-art" aria-label="PANDA MODZ visual">
+        <div class="art-orbit orbit-a"></div>
+        <div class="art-orbit orbit-b"></div>
+        <div class="art-card">
+          <div class="art-card-top"><span>PM / 001</span><span class="live-label">● ONLINE</span></div>
+          <div class="panda-mark">🐼</div>
+          <div class="art-card-title">PANDA<br><b>MODZ</b></div>
+          <div class="art-card-bottom"><span>PREMIUM ACCESS</span><span>✦</span></div>
+        </div>
+        <div class="floating-chip chip-top">✦ PREMIUM</div>
+        <div class="floating-chip chip-bottom">MODZ • KEYS • UPDATES</div>
+      </div>
+    </section>
+
+    <section class="metrics section-wrap" aria-label="Platform features">
+      <div><strong>MODZ</strong><span>КАТАЛОГ</span></div>
+      <div><strong>KEY</strong><span>СИСТЕМА ДОСТУПА</span></div>
+      <div><strong>24/7</strong><span>ДОСТУП К САЙТУ</span></div>
+    </section>
+
+    <section class="section-wrap store-section" id="store">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker">DISCOVER SOMETHING NEW</div>
+          <h2>Наш <span>каталог</span></h2>
+          <p>Выбери категорию или найди нужный продукт.</p>
+        </div>
+        <label class="search-box"><span>⌕</span><input id="productSearch" type="search" placeholder="Поиск продуктов..." autocomplete="off"></label>
+      </div>
+
+      <div class="filter-row" id="filters">
+        <button class="filter-button active" data-filter="all">Все продукты</button>
+        <button class="filter-button" data-filter="games">Игры</button>
+        <button class="filter-button" data-filter="apps">Приложения</button>
+        <button class="filter-button" data-filter="tools">Инструменты</button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <article class="product-card" data-category="games" data-search="game mod games">
+          <div class="product-image image-game"><span class="image-symbol">◈</span><span class="image-label">GAMES</span></div>
+          <div class="product-info">
+            <div class="product-meta"><span>ИГРЫ</span><span class="status-dot">● В КАТАЛОГЕ</span></div>
+            <h3>Game MOD</h3>
+            <p>Карточка для игрового продукта. Информация и ссылка появятся после добавления релиза.</p>
+            <div class="product-footer"><span class="version">Версия: скоро</span><button class="small-button" data-coming-soon>Подробнее ↗</button></div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="apps" data-search="premium app applications">
+          <div class="product-image image-app"><span class="image-symbol">✧</span><span class="image-label">APPLICATIONS</span></div>
+          <div class="product-info">
+            <div class="product-meta"><span>ПРИЛОЖЕНИЯ</span><span class="status-dot">● В КАТАЛОГЕ</span></div>
+            <h3>Premium App</h3>
+            <p>Карточка приложения с описанием, версией и официальной ссылкой на загрузку.</p>
+            <div class="product-footer"><span class="version">Версия: скоро</span><button class="small-button" data-coming-soon>Подробнее ↗</button></div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="tools" data-search="utility tools">
+          <div class="product-image image-tools"><span class="image-symbol">⌘</span><span class="image-label">TOOLS</span></div>
+          <div class="product-info">
+            <div class="product-meta"><span>ИНСТРУМЕНТЫ</span><span class="status-dot">● В КАТАЛОГЕ</span></div>
+            <h3>Utility Tools</h3>
+            <p>Раздел цифровых инструментов. Добавь сюда описание и проверенную ссылку продукта.</p>
+            <div class="product-footer"><span class="version">Версия: скоро</span><button class="small-button" data-coming-soon>Подробнее ↗</button></div>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>Ничего не найдено. Попробуй изменить запрос.</p>
+    </section>
+
+    <section class="section-wrap key-section" id="key-system">
+      <div class="key-panel">
+        <div class="key-icon">⌑</div>
+        <div class="section-kicker">SECURE ACCESS</div>
+        <h2>KEY <span>SYSTEM</span></h2>
+        <p>Введи лицензионный ключ, чтобы перейти к проверке доступа. Серверная проверка будет подключена на следующем этапе.</p>
+        <form class="key-form" id="keyForm">
+          <input id="licenseKey" type="text" placeholder="Введи свой лицензионный ключ..." required maxlength="120">
+          <button class="button button-primary" type="submit">Проверить ключ <span>→</span></button>
+        </form>
+        <div class="form-message" id="keyMessage" role="status" aria-live="polite"></div>
+        <div class="security-note">🔒 Не вводи здесь пароль от своих аккаунтов.</div>
+      </div>
+    </section>
+
+    <section class="section-wrap about-section" id="about">
+      <div class="about-box">
+        <div><div class="section-kicker">ABOUT PANDA MODZ</div><h2>Одна платформа.<br><span>Больше возможностей.</span></h2></div>
+        <p>PANDA MODZ — витрина цифровых продуктов с каталогом, информацией о релизах и системой доступа. Проверяй безопасность файлов и используй только те материалы, на распространение которых есть разрешение.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#home">PANDA<span>MODZ</span><i>®</i></a>
+    <p>© <span id="year"></span> PANDA MODZ. Все права защищены.</p>
+    <a href="#home">Наверх ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
